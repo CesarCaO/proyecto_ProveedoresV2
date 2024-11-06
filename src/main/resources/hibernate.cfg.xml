@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- Configuración de la conexión a la base de datos -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/proveedores_bd?useSSL=false</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">Edwin321</property>
+          <!-- Escaneo automático de todas las clases anotadas -->
+        <property name="hibernate.archive.autodetection">class</property>
+
+        
+        <!-- Opciones adicionales -->
+        <property name="hibernate.show_sql">true</property>       <!-- Muestra las consultas SQL en la consola -->
+        <property name="hibernate.format_sql">true</property>     <!-- Formatea las consultas SQL en la consola -->
+        <property name="hibernate.hbm2ddl.auto">none</property>   <!-- No modifica la estructura de la base de datos -->
+        
+    </session-factory>
+</hibernate-configuration>
